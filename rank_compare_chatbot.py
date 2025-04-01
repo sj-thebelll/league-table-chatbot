@@ -2,7 +2,7 @@ import os
 import streamlit as st
 import pandas as pd
 import openai
-from utils import load_dataframes  # ← 이제 들여쓰기 없이!
+from utils import load_dataframes
 import re
 from dotenv import load_dotenv
 
