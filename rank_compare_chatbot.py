@@ -6,8 +6,6 @@ from utils import load_dataframes  # ← 이제 들여쓰기 없이!
 import re
 from dotenv import load_dotenv
 
-
-
 # ✅ .env 파일 로드
 load_dotenv()
 
