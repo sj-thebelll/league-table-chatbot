@@ -2,9 +2,9 @@ import os
 import streamlit as st
 import pandas as pd
 import openai
-from utils import load_dataframes  # 데이터 로드 유틸 함수
+from utils import load_dataframes
 import re
-from dotenv import load_dotenv  # ✅ 환경변수 로드용 모듈 추가
+from dotenv import load_dotenv
 
 # ✅ .env 파일 로드
 load_dotenv()
