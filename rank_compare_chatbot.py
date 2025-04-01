@@ -2,12 +2,15 @@ import os
 import streamlit as st
 import pandas as pd
 import openai
-from utils import load_dataframes  # 반드시 들여쓰기가 맞게!
+from utils import load_dataframes
 import re
+from dotenv import load_dotenv  # .env 파일 로드
+
+# ✅ .env 파일 로드
+load_dotenv()
 
 # ✅ Streamlit Cloud에 등록된 Secrets에서 키 가져오기
-openai.api_key = os.environ["OPENAI_API_KEY"]
-
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # 챗봇 제목
 st.set_page_config(page_title="더벨 리그테이블 챗봇", page_icon="📊")
@@ -24,7 +27,7 @@ st.markdown("""
 st.markdown("""
 #### 💬 예시 질문
 - `2024, ABS, 대표주관, 미래에셋, 순위`  
-  → 2024년 ABS의 대표주관사 순위는 미래에셋입니다.
+  → 2024년 미래에셋증권의 ABS 대표주관사 순위는 없습니다.
 - `2020, ECM, 대표주관, KB증권, 순위`  
   → 2020년 ECM의 대표주관사 순위는 KB증권입니다.
 - `2020, ABS, 대표주관, 삼성증권, 순위`  
