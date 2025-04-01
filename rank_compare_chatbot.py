@@ -4,15 +4,10 @@ import pandas as pd
 import openai
 from utils import load_dataframes
 import re
-from dotenv import load_dotenv
 
-# ✅ .env 파일 로드
-load_dotenv()
+# ✅ Streamlit Cloud에 등록된 Secrets에서 키 가져오기
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
-dfs = load_dataframes(".")
-
-# ✅ OpenAI API 키 설정 (환경변수에서 가져오기)
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # 챗봇 제목
 st.set_page_config(page_title="더벨 리그테이블 챗봇", page_icon="📊")
