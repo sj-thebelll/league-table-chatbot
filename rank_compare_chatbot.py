@@ -9,6 +9,8 @@ from dotenv import load_dotenv  # ✅ 환경변수 로드용 모듈 추가
 # ✅ .env 파일 로드
 load_dotenv()
 
+dfs = load_dataframes(".")
+
 # ✅ OpenAI API 키 설정 (환경변수에서 가져오기)
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
