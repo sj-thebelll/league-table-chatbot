@@ -2,9 +2,10 @@ import os
 import streamlit as st
 import pandas as pd
 import openai
-from utils import load_dataframes
+from utils import load_dataframes  # ← 여기 들여쓰기 삭제!
 import re
 from dotenv import load_dotenv
+
 
 # ✅ .env 파일 로드
 load_dotenv()
