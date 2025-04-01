@@ -6,19 +6,19 @@ import pandas as pd
 def load_dataframes(data_dir):
     dfs = {}
 
-    file_mapping = {
-        "국내채권": "domestic.xlsx",
-        "ABS": "abs.xlsx",
-        "FB": "fb.xlsx",
-        "ECM": "ecm.xlsx"
-    }
+   file_mapping = {
+    "국내채권": "domestic_bond.xlsx",
+    "ABS": "abs.xlsx",
+    "FB": "fb.xlsx",
+    "ECM": "ecm.xlsx"
+}
 
-    sheet_mapping = {
-        "국내채권": "Sheet1",
-        "ABS": "Sheet1",
-        "FB": "Sheet1",
-        "ECM": "Sheet1"
-    }
+sheet_mapping = {
+    "국내채권": "전체 국내채권 대표주관 순위",
+    "ABS": "유동화증권(ABS) 대표주관 순위",
+    "FB": "FB 대표주관 순위",
+    "ECM": "ECM 대표주관 순위"
+}
 
     for product, filename in file_mapping.items():
         file_path = os.path.join(data_dir, filename)
