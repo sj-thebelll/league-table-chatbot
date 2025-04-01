@@ -2,7 +2,7 @@ import os
 import streamlit as st
 import pandas as pd
 import openai
-from utils import load_dataframes
+from utils import load_dataframes  # 반드시 들여쓰기가 맞게!
 import re
 
 # ✅ Streamlit Cloud에 등록된 Secrets에서 키 가져오기
